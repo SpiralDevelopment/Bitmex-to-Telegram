@@ -7,7 +7,7 @@
 ### Create Telegram bot
 
 * Contact [@BotFather](https://t.me/botfather) in your Telegram messenger
-* Create a new bot by sending ```/newbot``` command and choose new name for your bot. Then, you will receive a link to your bot an access token.
+* Create a new bot by sending ```/newbot``` command and choose new name for your bot. Then, you will receive a link to your bot and an access token.
 * Head over to the ```bot_manager.py``` file and set your access token to ```TELEGRAM_BOT_TOKEN``` variable
 
 ### Set up Bitmex API keys
@@ -41,11 +41,11 @@ Bot has the following commands:
 /short - Create sell market order. ::Symbol, Quantity 
 /margin_status - Get margin status 
 /positions - Get open positions 
-/orders - Get orders ::Last-n 
+/orders - Get orders ::Last N 
 /cancel - Cancel order with ID ::OrderID 
 /cancel_all - Cancel all orders 
-/leverage - Set leverage ::Symbol,leverage 
-/history - Get wallet history. ::Last-n 
+/leverage - Set leverage ::Symbol, Leverage 
+/history - Get wallet history. ::Last N 
 /instrument - Get instrument(s). ::Symbol 
 /indices - Get price indices. ::Root Symbol
 ```
