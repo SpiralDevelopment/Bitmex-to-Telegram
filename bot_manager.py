@@ -12,7 +12,7 @@ logging.basicConfig(format='%(asctime)s - %(name)s - %(levelname)s - %(message)s
 
 logger = logging.getLogger(__name__)
 
-all_commands = {"/help": "All commands",
+all_commands = {"/help": "List of all commands",
                 "/long": "Create buy market order. ::Symbol, Quantity",
                 "/short": "Create sell market order. ::Symbol, Quantity",
                 "/margin_status": "Get margin status",
@@ -25,25 +25,23 @@ all_commands = {"/help": "All commands",
                 "/instrument": "Get instrument(s). ::Symbol",
                 "/indices": "Get price indices. ::Root Symbol"}
 
-DEF_MESSAGE = "This is a private bot to manage Bitmex account. " \
-              "You can also set it up with your own Bitmex aaccount.\n" \
+DEF_MESSAGE = "This is a private bot to manage Bitmex account.\n" \
+              "You can also set it up with your own Bitmex aaccount.\n\n" \
               "Get the source code here: {}\n" \
-              "or contact {} for help".format("https://github.com/SpiralDevelopment/Bitmex-to-Telegram",
+              "or contact {} for help.".format("https://github.com/SpiralDevelopment/Bitmex-to-Telegram",
                                               "@spiral_dev")
 USD_CONTRACTS = ['ETH', 'XBT']
 
-# change the following variables
 XBT_CONTRACTS_CODE = "U20"
-TELEGRAM_BOT_TOKEN = "TEELGRAM_BOT_TOKEN"
-BITMEX_API_KEY = "YOUR_BITMEX_API_KEY"
-BITMEX_API_SECRET = "YOUR_BITMEX_API_SECRET"
+TELEGRAM_BOT_TOKEN = "YOUR_TELEGRAM_BOT_TOKEN"
 
 
 class TelegramBot(object):
 
     def __init__(self):
         try:
-            self.bitmex_api = BitmexApi(api_key=BITMEX_API_KEY, api_secret=BITMEX_API_SECRET)
+            self.bitmex_api = BitmexApi(api_key=os.environ['BITMEX_API_KEY'],
+                                        api_secret=os.environ['BITMEX_API_SECRET'])
             self.updater = Updater(TELEGRAM_BOT_TOKEN)
 
             self.dispatcher = self.updater.dispatcher
@@ -91,9 +89,9 @@ class TelegramBot(object):
     @staticmethod
     def get_help(bot, update):
         logger.info(inspect.stack()[0][3])
-        logger.info("Your Chat ID: %s", update.message.chat_id)
-        logger.info("Your First Name: %s", update.message.from_user.first_name)
-        logger.info("Your Last Name: %s", update.message.from_user.last_name)
+        logger.info("Admin Chat ID: %s", update.message.chat_id)
+        logger.info("First Name: %s", update.message.from_user.first_name)
+        logger.info("Last Name: %s", update.message.from_user.last_name)
         message = DEF_MESSAGE
 
         if is_admin_texting(update):

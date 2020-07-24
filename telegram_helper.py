@@ -1,6 +1,6 @@
 from telegram.error import BadRequest
 
-ADMIN_CHAT_ID = 12345678  # Your 8-digit chat id
+ADMIN_CHAT_ID = 123456789  # Your chat id
 ADMIN_FIRST_NAME = "Your_telegram_first_name"
 ADMIN_LAST_NAME = "Your_telegram_last_name"
 
