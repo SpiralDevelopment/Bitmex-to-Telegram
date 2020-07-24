@@ -32,7 +32,7 @@ DEF_MESSAGE = "This is a private bot to manage Bitmex account.\n" \
                                               "@spiral_dev")
 USD_CONTRACTS = ['ETH', 'XBT']
 
-XBT_CONTRACTS_CODE = "U20"
+CONTRACTS_CODE = "U20"
 TELEGRAM_BOT_TOKEN = "YOUR_TELEGRAM_BOT_TOKEN"
 
 
@@ -273,7 +273,7 @@ class TelegramBot(object):
                         if root_symbol in USD_CONTRACTS:
                             pair = root_symbol + "USD"
                         else:
-                            pair = root_symbol + XBT_CONTRACTS_CODE
+                            pair = root_symbol + CONTRACTS_CODE
 
                         order = self.bitmex_api.create_order(pair,
                                                              orderType='Market',
@@ -339,7 +339,7 @@ class TelegramBot(object):
                         if root_symbol in USD_CONTRACTS:
                             symbol = root_symbol + "USD"
                         else:
-                            symbol = root_symbol + XBT_CONTRACTS_CODE
+                            symbol = root_symbol + CONTRACTS_CODE
 
                         order = self.bitmex_api.create_order(symbol,
                                                              orderType='Market',
@@ -405,7 +405,7 @@ class TelegramBot(object):
                         if root_symbol in USD_CONTRACTS:
                             pair = root_symbol + "USD"
                         else:
-                            pair = root_symbol + XBT_CONTRACTS_CODE
+                            pair = root_symbol + CONTRACTS_CODE
 
                         response = self.bitmex_api.set_leverage(pair, leverage)
                         logger.info(response)
