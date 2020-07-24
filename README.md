@@ -4,13 +4,13 @@
 
 ## Configuration
 
-### Telegram bot
+### Create Telegram bot
 
 * Contact [@BotFather](https://t.me/botfather) in your Telegram messenger
-* Create a new bot by sending ```/newbot``` command and choose new name for your bot. Then, you will receive an access token.
+* Create a new bot by sending ```/newbot``` command and choose new name for your bot. Then, you will receive a link to your bot an access token.
 * Head over to the ```bot_manager.py``` file and set your access token to ```TELEGRAM_BOT_TOKEN``` variable
 
-### Bitmex API KEYS
+### Set up Bitmex API keys
 
 * Setup ```BITMEX_API_KEY``` and ```BITMEX_API_SECRET``` environment variables to your bitmex account api key and secret.
 
@@ -18,9 +18,9 @@
 
 You need to make sure that no one will use this bot except yourself. That's why, we make the bot private so it will respond only to messages from your telegram account.
 
-* Run ```main.py``` file, now your bot is running
-* Start a conversation with your telegram bot and send ```/help``` command 
-* Check the logs in the consolde. You get:
+* Run ```main.py``` file, now your telegram bot is running
+* Start a conversation with your telegram bot with the link provided by [@BotFather](https://t.me/botfather) and send ```/help``` command 
+* Check the logs in the console. You get:
 
 ```
 2020-07-24 20:17:03,612 - bot_manager - INFO - Admin Chat ID: 432156789
@@ -62,3 +62,7 @@ Your Support and Donations are welcomed and appreciated!
 * **ETH:** 0x66615e09f7f46429e7620ffbf78479879bbab41d
 
 * **LTC:** LRxYMgEXMumwxYdimZo9EJ5CfBcipD5c3n
+
+## LICENSE
+
+[MIT LICENSE](https://github.com/SpiralDevelopment/Bitmex-to-Telegram/blob/master/LICENSE)
