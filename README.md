@@ -14,6 +14,11 @@
 
 * Setup ```BITMEX_API_KEY``` and ```BITMEX_API_SECRET``` environment variables to your bitmex account api key and secret.
 
+### Month Codes
+
+* Quote symobol for future contracts at bitmex changes after settlement. Currently active future contracts ends with "U20". You need to change this value yourself based on active contracts and set it to ```CONTRACTS_CODE``` variable in ```bot_manager.py``` file
+
+
 ## Make Telegram Bot Private
 
 You need to make sure that no one will use this bot except yourself. That's why, we make the bot private so it will respond only to messages from your telegram account.
