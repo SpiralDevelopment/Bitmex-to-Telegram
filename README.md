@@ -1,5 +1,5 @@
 # Bitmex-to-Telegram
-> Manage your Bitmex account using the Telegram bot
+> Manage your Bitmex account using the Private Telegram bot
 
 
 ## Configuration
@@ -16,9 +16,11 @@
 
 ## Make Telegram Bot Private
 
-You need to make sure that no one will use this bot except yourself. So, we make the bot so that it will respond only to messages from your telegram account.
+You need to make sure that no one will use this bot except yourself. That's why, we make the bot private so it will respond only to messages from your telegram account.
 
-Run ```main.py``` file, send ```/help``` command in your bot and check the logs. You get:
+* Run ```main.py``` file, now your bot is running
+* Start a conversation with your telegram bot and send ```/help``` command 
+* Check the logs in the consolde. You get:
 
 ```
 2020-07-24 20:17:03,612 - bot_manager - INFO - Admin Chat ID: 432156789
@@ -26,9 +28,9 @@ Run ```main.py``` file, send ```/help``` command in your bot and check the logs.
 2020-07-24 20:17:03,612 - bot_manager - INFO - Last Name: Dev
 ```
 
-Now, stop the script and head over to the ```telegram_helper.py``` file and set ```ADMIN_CHAT_ID```, ```ADMIN_FIRST_NAME``` and ```ADMIN_LAST_NAME``` variables to what you got from the console.
+Now, head over to the ```telegram_helper.py``` file and set ```ADMIN_CHAT_ID```, ```ADMIN_FIRST_NAME``` and ```ADMIN_LAST_NAME``` variables to what you got from the console.
 
-Done!
+Rerun the script. Done!
 
 ## Commands
 
